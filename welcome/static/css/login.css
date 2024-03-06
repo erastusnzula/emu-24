@@ -1,0 +1,179 @@
+
+.sl{
+    height: 550px;
+    display: flex;
+    background-color: var(--primary-color);
+    position: relative;
+    margin-top: 0;
+}
+
+.login-sign-up-container{
+    margin-top: 50px;
+    position: relative;
+    width: 450px;
+    height: 450px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    /* box-shadow: 0 0 5px var(--primary-color); */
+    box-shadow: 0 3px 50px rgba(0,0,0,.2);
+    overflow: hidden;
+}
+
+/* .login-sign-up-container:hover{
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+
+} */
+
+
+.form-data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease-in-out;
+}
+
+.login-sign-up-container.active .form-data.sign-in{
+    transform: translateY(-500px);
+}
+
+.login-sign-up-container .form-data.sign-up{
+    position: absolute;
+    top: 500px;
+    left: 0;
+}
+
+.login-sign-up-container.active .form-data.sign-up{
+    transform: translateY(-500px);
+}
+
+.form-data h2{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+
+.form-data .input-group{
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.form-data .input-group label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: .5s;
+    pointer-events: none;
+    font-size: 16px;
+    color: #fff;
+}
+
+.form-data .input-group input{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    width: 320px;
+    height: 40px;
+    padding: 0 5px;
+    font-size: 16px;
+}
+
+.form-data .input-group input:focus~label,
+.form-data .input-group input:valid~label{
+    top: -5px;
+}
+
+
+.remember{
+    margin: -5px 0 15px 5px;
+}
+
+.remember label{
+    font-size: 14px;
+    color: #fff;
+}
+
+.remember label input{
+    accent-color: var(--primary-color);
+}
+
+.form-data button{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: 1px #fff solid;
+    outline: none;
+    border-radius: 30px;
+    font-size: 16px;
+    box-shadow: 0 0 10px var(--primary-color);
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.form-data button:hover{
+    transform: scale(.95);
+}
+
+.form-data .sign-up-link{
+    text-align: center;
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+.form-data .sign-up-link p{
+    color: #fff;
+}
+
+.form-data .sign-up-link p a{
+    text-decoration: none;
+    font-weight: 500;
+    color: rgb(21, 159, 229);
+}
+
+.form-data .sign-up-link p a:hover{
+    text-decoration: underline;
+}
+
+
+
+.sl::before,
+.sl::after{
+    content: '';
+    position: absolute;
+    height: 100px;
+    background: #fff;
+    right: 0;
+    left: 0;
+    bottom: -80px;
+    transform: skewY(-2deg);
+    -webkit-transform: skewY(-2deg);
+    -moz-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+
+}
+
+
+@media only screen and (max-width: 400px){
+    .login-sign-up-container {
+        width: 90%;
+        padding: 0;
+    }
+
+    .form-data .input-group input {
+        width: 100%;
+
+    }
+}

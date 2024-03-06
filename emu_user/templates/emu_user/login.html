@@ -1,0 +1,62 @@
+{% extends 'welcome/base.html' %}
+{% block title %}Log In{% endblock title%}
+{% block content %}
+
+<div class="sl">
+<div class="login-sign-up-container container">
+    <div class="form-data sign-in">
+        <form action="">
+            <h2>Login</h2>
+            <!-- <div class="input-group">
+                <input type="text" required>
+                <label for="">Username</label>
+            </div> -->
+            <div class="input-group">
+                <input type="email" id="login-email" name="login-email" required>
+                <label for="login-email">Email</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="login-password" name="login-password" required>
+                <label for="login-password">Password</label>
+            </div>
+            <div class="remember">
+                <label for="login-remember"><input type="checkbox" id="login-remember" name="login-remember"> Remember me</label>
+            </div>
+            <button type="submit">Login</button>
+            <div class="sign-up-link">
+                <p>Don't have an account? <a class="sign-up-link-btn">Sign Up</a></p>
+            </div>
+        </form>
+    </div>
+    <div class="form-data sign-up">
+        <form action="">
+            <h2>Sign Up</h2>
+            <!-- <div class="input-group">
+                <input type="text" required>
+                <label for="">Username</label>
+            </div> -->
+            <div class="input-group">
+                <input type="email" name="sign-up-email" id="sign-up-email" required>
+                <label for="sign-up-email">Email</label>
+            </div>
+            <div class="input-group">
+                <input type="password" name="sign-up-password1" id="sign-up-password1" required>
+                <label for="sign-up-password1">Password</label>
+            </div>
+            <div class="input-group">
+                <input type="password" name="sign-up-password2" id="sign-up-password2" required>
+                <label for="sign-up-password2">Confirm Password</label>
+            </div>
+            <div class="remember">
+                <label for="sign-up-remember"><input type="checkbox" name="sign-up-remember" id="sign-up-remember"> I agree to the terms & conditions.</label>
+            </div>
+            <button type="submit">Sign Up</button>
+            <div class="sign-up-link">
+                <p>Already have an account? <a class="sign-in-link-btn">Sign In</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+{% endblock content %}

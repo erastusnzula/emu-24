@@ -1,0 +1,47 @@
+{% extends 'welcome/base.html' %}
+{% block title %}Home{% endblock title%}
+
+{% block content %}
+
+<section class="welcome">
+    <div class="container grid">
+        <div class="welcome-text">
+            <h1>Affordable Services</h1>
+            <p>
+                Deploy web apps of all kinds, from large scale enterprise APIs to static websites for individuals. Fill
+                out the form to try a demo of our platform
+            </p>
+            <a class="btn btn-outline">Read More</a>
+        </div>
+        <div class="welcome-form card">
+            <form action="">
+                <h2>Contact Us</h2>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label for="">Enter Your Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="sign-up-email" id="sign-up-email" required>
+                    <label for="sign-up-email">Enter Your Email Address</label>
+                </div>
+                <div class="input-group" id="textarea-message">
+                    <textarea name="contact-message" id="contact-message" rows="3" required></textarea>
+                    <label for="contact-message">Enter Your Message</label>
+                </div>
+                
+                <button type="submit">Submit</button>
+                
+            </form>
+
+        </div>
+    </div>
+    
+</section>
+<section class="scroll">
+    <div class="container">
+        <p>Deploy web apps of all kinds, from large scale enterprise APIs to static websites for individuals. Fill out the form to try a demo of our platform</p>
+        <button class="btn">Click here</button>
+    </div>
+</section>
+
+{% endblock content %}
