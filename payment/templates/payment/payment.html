@@ -1,0 +1,109 @@
+{% extends 'welcome/base.html' %}
+{% load static %}
+{% block title%}Pay{% endblock title%}
+
+{% block content %}
+<section class="payment container">
+    <div class="order-payment-data grid">
+    <div class="order-data">
+        <form action="">
+            <h2>Order Summary</h2>
+            
+            <div class="order-input-data">
+                <table>
+                    <tr>
+                      {% comment %} <th>Company</th>
+                      <th>Contact</th> {% endcomment %}
+                    </tr>
+                    <tr>
+                      <td>Order Number: </td>
+                      <td class="order-value">01</td>
+                    </tr>
+                    <tr>
+                      <td>Total:    </td>
+                      <td class="order-value">8,000.00</td>
+                    </tr>
+                    <tr>
+                      <td>Discount:</td>
+                      <td class="order-value">20%</td>
+                    </tr>
+                    <tr>
+                      <td>Total Payable:</td>
+                      <td class="order-value">6,000.00</td>
+                
+                    </tr>
+                  </table>
+            </div>
+            
+        </form>
+    </div>
+    <div class="payment-data">
+        <form action="">
+            <h2>Select Payment Method</h2>
+            <div class="cards-container">
+        
+                <div class="payment-cards card" id="card-clicked">
+                    
+                    <input style="display: none" required>
+                    <img src={% static "cards/mastercard.png" %} class="card-clicked" alt="mastercard">
+                </div>
+                <div class="payment-cards card" id="vcard-clicked">
+                    <img src={% static "cards/visa.png" %} class="vcard-clicked" alt="mastercard">
+                </div>
+                <div class="payment-cards card">
+                    <img src={% static "cards/paypal.png" %} class="mastercard-img" alt="mastercard">
+                </div>
+                <div class="payment-cards card">
+                    <img src={% static "cards/stripe.png" %} class="mastercard-img" alt="mastercard">
+                </div>
+                <div class="payment-cards card">
+                    <img src={% static "cards/mpesa.jpg" %} class="mastercard-img" alt="mastercard">
+                </div>
+            </div>
+            <div class="mastercard-selected">
+                <div class="payment-input-data">
+                    <div class="input-group" >
+                        <input type="email" name="sign-up-email" id="payment-email" value="Mastercard" required disabled>
+                        {% comment %} <label for="sign-up-email">Enter Your Email Address</label> {% endcomment %}
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="payment-card-number" required disabled>
+                        <label for="">Enter Card Number</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="payment-card-CVV"required disabled>
+                        <label for="">Enter CVV</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="payment-card-expiry" required disabled>
+                        <label for="">Enter Expiry Date</label>
+                    </div>
+                    <button type="submit" class="pay-btn btn btn-outline">Pay</button>
+                </div>
+            </div>
+            <div class="visacard-selected">
+                <div class="payment-input-data">
+                    <div class="input-group" >
+                        <input type="email" name="sign-up-email" id="vpayment-email" value="Visa Card" required disabled>
+                        {% comment %} <label for="sign-up-email">Enter Your Email Address</label> {% endcomment %}
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="vpayment-card-number" required disabled>
+                        <label for="">Enter Card Number</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="vpayment-card-CVV"required disabled>
+                        <label for="">Enter CVV</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="vpayment-card-expiry" required disabled>
+                        <label for="">Enter Expiry Date</label>
+                    </div>
+                    <button type="submit" class="pay-btn btn btn-outline">Pay</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</section>
+{% endblock content%}

@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'welcome.apps.WelcomeConfig',
     'emu_user.apps.EmuUserConfig',
+    'payment.apps.PaymentConfig',
     #'emu.apps.EmuConfig',
     # 'allauth',
     # 'allauth.account',

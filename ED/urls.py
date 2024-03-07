@@ -24,6 +24,7 @@ urlpatterns = [
 
     path('', include('welcome.urls'), name='welcome'),
     path('user/', include('emu_user.urls'), name='emu-user'),
+    path('payment/', include('payment.urls'), name='payment'),
     #path('emu/', include('emu.urls'), name='emu'),
     # path('accounts/', include('allauth.urls')),
 ]
